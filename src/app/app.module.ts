@@ -14,14 +14,14 @@ import { CustomFormsModule} from 'ng2-validation';
 
 import  { AngularFireDatabaseModule } from 'angularfire2/database';
 import {HttpClientModule} from '@angular/common/http';
-import { SaveComponent } from './save/save.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AddCustomerComponent,
-    SaveComponent,
+    AddCustomerComponent
+
     
   ],
   imports: [
