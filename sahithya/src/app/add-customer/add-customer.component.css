@@ -1,0 +1,13 @@
+.cust-form{
+    border-color: royalblue;
+    border-style: ridge;
+    border-width: 1em;
+    background-color: skyblue;
+    padding:3em;
+    width: 800px;
+
+}
+
+button {
+    margin: 20px;
+  }

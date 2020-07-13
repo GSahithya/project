@@ -1,0 +1,45 @@
+.mid{
+    padding-top: 2cm;
+    padding-left: 30px; 
+
+}
+.but-add-cust{
+    padding-left: 850pt;
+    margin-top: 1cm;
+    color: white;
+    border-color: blue;
+}
+table {
+
+    background-color: papayawhip;
+    width: 1000px;
+    text-align: center;
+    margin-left: 100px;
+}
+button {
+    padding-left: 10pt;
+    background-color: blue;
+    color: white;
+}
+
+.mid{
+    padding-top: 20pt;
+    padding-left: 45pt; 
+}
+.but-add-cust{
+    padding-left: 850pt;
+    color: blue;
+    
+    
+    font-size: 20px;
+}
+table {
+    background-color: papayawhip;
+    padding-left: 70px;
+}
+.save-btn {
+    background-color: blue;
+    color:white;
+    padding-left: 70px;
+    margin-top: 1cm;
+}

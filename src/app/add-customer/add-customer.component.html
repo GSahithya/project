@@ -1,0 +1,120 @@
+<form [formGroup]="form" class='cust-form container' (ngSubmit)="onSubmit()">
+  
+  <div class='form-group'>
+      <label for='firstName'>First Name :</label>
+      <input  formControlName="firstName" id='firstName' type='text'  class='form-control'>
+  </div>
+
+  <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="firstName.errors.required">
+          First Name is required.
+      </div>
+      <div *ngIf="firstName.errors.minlength">
+          First Name must be at least {{firstName.errors.minlength.requiredLength}} characters long.
+      </div>
+      <div *ngIf='firstName.errors.cannotContainSpace' >
+        FirstName cannot contain spaces.
+    </div>
+ 
+  </div>
+
+  
+
+  <div class='form-group'>
+      <label for='lastName'>Last Name :</label>
+      <input   formControlName="lastName" id='lastName' type='text' class='form-control'>
+  </div>
+
+  
+  <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="lastName.errors.required">
+          Last Name is required.
+      </div>
+      <div *ngIf="lastName.errors.minlength">
+          Last Name must be at least {{lastName.errors.minlength.requiredLength}} characters long.
+      </div>
+      <div *ngIf='lastName.errors.cannotContainSpace' >
+        LastName cannot contain spaces.
+   </div>
+  </div>
+
+
+
+  <div class='form-group'>
+      <label for='gender'>Gender:</label><br>
+      <input type="radio" id="male" formControlName="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" formControlName="gender" value="female">
+      <label for="female">Female</label><br>
+  </div>
+
+  <div *ngIf="gender.invalid && (gender.dirty || gender.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="gender.errors.required">
+          Gender is required.
+      </div>
+  </div>
+
+
+  <div class='form-group'>
+      <label for='address'>Address :</label>
+      <input  formControlName="address" id='address' type='text' class='form-control'>
+  </div>
+  <div *ngIf="address.invalid && (address.dirty || address.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="address.errors.required">
+          Address is required.
+      </div>
+  </div>
+  <div *ngIf="gender.invalid && (gender.dirty || gender.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="gender.errors.required">
+          Gender is required.
+      </div>
+  </div>
+
+  <div class='form-group'>
+      <label for='city'>City :</label>
+      <input  formControlName="city" id='city' type='text' class='form-control'>
+  </div>
+  <div *ngIf="city.invalid && (city.dirty || city.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="city.errors.required">
+          City is required.
+      </div>
+  </div>
+  <div class='form-group'>
+      <label for='state'>State :</label>
+      <input formControlName="state" id='state' type='text' class='form-control'>
+  </div>
+  <div *ngIf="state.invalid && (state.dirty || state.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="state.errors.required">
+          State is required.
+      </div>
+  </div>
+  <div class='form-group'>
+      <label for='email'>E-mail :</label>
+      <input  formControlName="email" id='email' type='text' class='form-control'>
+  </div>
+  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+      class="alert alert-danger">
+
+      <div *ngIf="email.errors.required">
+          E-MAIL is required.
+      </div>
+      <div *ngIf="email.errors.email">E-MAIL must be a valid email address</div>
+  </div>
+  <button type='submit' class='btn btn-primary' [disabled]="!form.valid">Save/Update</button>
+  
+  <a class='btn btn-danger' routerLink=''>Cancel</a>
+</form>

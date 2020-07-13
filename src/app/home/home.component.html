@@ -1,0 +1,62 @@
+<div class='mid'>
+  <label ><b>filter:</b> </label>
+  <!-- <i class="fas fa-edit"></i> -->
+   <input type='text'
+          
+          #query
+          (ngModelChange)="filter(query.value)" placeholder="firstName.."  [(ngModel)]="firstName"
+
+   >
+     <div class='save_btn'>
+       <a class='btn btn-primary' (click)= "save()">save later</a>
+     </div>
+   <div class='but-add-cust'>
+      
+      <a class='btn btn-primary' routerLink='add-customer'>ADD New Customer</a>
+   </div>
+   
+</div>
+<br>
+<br>
+<div>
+  <table class="table  table-striped">
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Email</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+  <tbody>
+      <tr *ngFor="let c of filteredCustomers">
+          <td>{{c.firstName}}</td>
+          <td>{{c.lastName}}</td>
+          <td>{{c.address}}</td>
+          <td>{{c.city}}</td>
+          <td>{{c.state}}</td>
+          <td>{{c.email}}</td>
+          <td>
+              <a [routerLink]="['/add-customer/',c.key]"><i class="fas fa-user-edit"></i></a>
+              
+              <a style='padding-left : 25px' href="#" (click) ="delete(c.key)"><i class="fas fa-user-times"></i></a>
+          </td>
+      </tr>
+  </tbody>
+  </table>    
+</div>
+
+
+<!-- 
+<a 
+[routerLink]="['/newcustomer/',c.key]">
+Edit
+</a>
+<a 
+href="#"
+(click) ="delete(c.key)">
+Delete
+</a> -->
